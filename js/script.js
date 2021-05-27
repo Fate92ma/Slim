@@ -71,8 +71,14 @@ $(document).ready(function () { // Start Coding Here
     // Testimonial
 
     $('#mixedSlider').multislider({
-        duration: 500,
+        duration: 100,
         interval: 2000
+    });
+
+    // Gallery
+
+    var a = new FgGallery('.fg-gallery', {
+        cols: 4
     });
 
 }); // End Code

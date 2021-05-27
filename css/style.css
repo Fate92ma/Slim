@@ -18,6 +18,9 @@ Contact Me: fatema131khaled@gmail.com
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
+}
+
+body {
     font-family: 'Nunito Sans'
 }
 
@@ -39,11 +42,14 @@ img {
     max-width: 100%
 }
 
+/* Start Root */
+
 :root {
     --color1: #fe9191;
     --color2: #fe7878;
     --color3: #999999;
-    --bg: #f8f9fa
+    --bg: #f8f9fa;
+    --white: #fff
 }
 
 .nav-link.nav-active {
@@ -51,7 +57,27 @@ img {
     border-bottom: 2px solid var(--color2)
 }
 
-/* Preloader */
+header,
+.container1 ul li a,
+.tabs li,
+.tabs li:hover,
+.active2,
+.tabs1 li,
+#mixedSlider .MS-controls button,
+.coach ul li,
+.text6 p,
+.gallery-arrow > svg,
+.close-btn svg {
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    -ms-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s;
+}
+
+/* End Root */
+
+/* Start Preloader */
 
 .preloader {
     position: fixed;
@@ -78,14 +104,11 @@ img {
     -ms-transform: translate(-50%, -50%)
 }
 
-/* Header */
+/* End Preloader */
+
+/* Start Header */
 
 header {
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    transition: .3s;
     position: fixed;
     width: 100%;
     z-index: 999999
@@ -94,7 +117,7 @@ header {
 .container1 {
     display: flex;
     justify-content: space-between;
-    width: 75%;
+    width: 83%;
     margin: auto
 }
 
@@ -104,12 +127,7 @@ header {
 }
 
 .container1 ul li a {
-    color: var(--color4);
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    transition: .3s
+    color: var(--color4)
 }
 
 .container1 ul li a:hover {
@@ -117,7 +135,7 @@ header {
 }
 
 .change {
-    background: white;
+    background: var(--white);
     padding: 7px 0;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
     -o-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
@@ -140,19 +158,19 @@ header {
     display: flex !important;
     flex-direction: column;
     width: 100%;
-    background: white;
+    background: var(--white);
     position: absolute;
     left: 0;
-    top: 50px
+    top: 57px
 }
 
-@media (max-width: 1075px) {
+@media (max-width: 1200px) {
     .container1 {
         width: 96%
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
     .container1 ul {
         display: none
     }
@@ -162,7 +180,9 @@ header {
     }
 }
 
-/* Home */
+/* End Header */
+
+/* Start Home */
 
 .container2,
 .container3 {
@@ -172,66 +192,60 @@ header {
 
 .text1 {
     text-transform: uppercase;
-    writing-mode: vertical-rl;
     font-size: 100px;
-    text-align: center;
+    margin-top: 24px;
+    overflow-wrap: anywhere;
+    display: block;
     background: url(../img/divider.jpg);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -ms-background-clip: text;
     -o-background-clip: text;
-    background-clip: text;
-    font-weight: bold;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%)
+    background-clip: text
 }
 
-.text2 {
+.left1 {
+    text-align: center;
+    padding: 20px;
     width: 70%;
-    margin-top: 22%;
-    margin-left: auto;
-    margin-right: auto
+    margin: auto;
+    margin-top: 100px;
 }
 
-.text2 i {
+.left1 i {
+    text-align: center;
+    margin-bottom: 10px;
+    display: block;
     color: var(--color1);
-    margin-left: 50%;
     font-size: 50px
 }
 
-.text2 small {
+.left1 small {
     font-weight: bold;
     color: var(--color1);
     text-transform: uppercase;
     font-size: 14px
 }
 
-.text2 p {
-    margin: 40px 0;
-    line-height: 50px;
+.left1 p {
+    margin: 20px 0;
     color: black;
     font-size: 50px
 }
 
-.text2 p strong {
+.left1 p strong {
     font-weight: bolder
 }
 
-.text2 span {
-    line-height: 28px;
+.left1 span {
     font-size: 18px;
     color: var(--color3)
 }
 
-.text2 a {
-    color: white;
+.left1 a {
+    margin: auto;
+    color: var(--white);
     background: var(--color1);
     padding: 12px 34px;
     border-radius: 25px;
@@ -240,110 +254,19 @@ header {
     width: fit-content
 }
 
-@media (max-width: 1150px) {
-
-    .container2,
-    .container3 {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center
-    }
-
-    .text2 {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-        margin-top: 0;
-        margin-bottom: 40px
-    }
-
-    .text2 a {
-        margin: auto
-    }
-
-    .text2 p {
-        margin: 25px 0
-    }
-
-    .text2 i {
-        margin-bottom: 12px;
-        margin-left: 0
-    }
-
-    .text1 {
-        position: relative;
-        left: auto;
-        top: auto;
-        display: block;
-        transform: none;
-        writing-mode: horizontal-tb;
-        background: url(../img/divider2.jpg)
+@media (max-width: 1200px) {
+    .left1 {
+        width: 100%
     }
 }
 
-@media (max-width: 650px) {
-    .text2 p {
-        font-size: 42px
-    }
+/* End Home */
 
-    .text1 {
-        font-size: 80px
-    }
-
-    .text2 span {
-        font-size: 17px
-    }
-}
-
-@media (max-width: 550px) {
-    .text2 p {
-        font-size: 34px
-    }
-
-    .text1 {
-        font-size: 65px
-    }
-
-    .text2 span {
-        font-size: 16px
-    }
-}
-
-@media (max-width: 450px) {
-    .text2 p {
-        font-size: 28px
-    }
-
-    .text1 {
-        font-size: 55px
-    }
-
-    .text2 span {
-        font-size: 15px
-    }
-
-    .text2 a {
-        padding: 8px 20px
-    }
-}
-
-@media (max-width: 350px) {
-    .text1 {
-        font-size: 45px
-    }
-}
-
-@media (max-width: 275px) {
-    .text1 {
-        font-size: 36px
-    }
-}
-
-/* Info */
+/* Start Info */
 
 .info {
     background: var(--color2);
-    color: white;
+    color: var(--white);
     text-align: center
 }
 
@@ -379,19 +302,21 @@ header {
     background: var(--color2)
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
     .container4 {
         width: 100%
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
     .container4 {
         flex-direction: column
     }
 }
 
-/* Program */
+/* End Info */
+
+/* Start Program */
 
 #programs,
 .testimonial,
@@ -408,17 +333,12 @@ header {
 
 .tabs {
     padding: 50px 0;
-    color: white;
+    color: var(--white);
     background: var(--color1);
     flex: 1
 }
 
 .tabs li {
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    transition: .3s;
     cursor: pointer;
     margin-bottom: 40px;
     font-size: 20px;
@@ -437,11 +357,6 @@ header {
 
 .tabs li:hover,
 .active2 {
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    transition: .3s;
     font-weight: bolder;
     color: white ! important
 }
@@ -502,7 +417,7 @@ header {
 }
 
 .text3 a {
-    color: white;
+    color: var(--white);
     background: var(--color1);
     padding: 12px 34px;
     border-radius: 25px;
@@ -511,14 +426,15 @@ header {
     width: fit-content
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
     .container5 {
         width: 100%
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
     .container5 {
+        margin-top: 20px;
         text-align: center;
         flex-direction: column
     }
@@ -533,14 +449,10 @@ header {
     }
 
     .tabs li i {
+        transform: rotate(90deg);
         margin-right: 0;
         margin-left: 0;
         margin-bottom: 7px;
-    }
-
-    .tabs li:hover:after,
-    .active2:after {
-        display: none
     }
 
     .text3 {
@@ -552,29 +464,9 @@ header {
     }
 }
 
-@media (max-width: 650px) {
-    .text3 {
-        padding: 15px
-    }
+/* End Program */
 
-    .text3 p {
-        font-size: 16px
-    }
-}
-
-@media (max-width: 450px) {
-    .text3 a {
-        padding: 9px 24px
-    }
-}
-
-@media (max-width: 300px) {
-    .text3 h5 {
-        font-size: 24px
-    }
-}
-
-/* Services */
+/* Start Services */
 
 #services,
 .testimonial,
@@ -618,45 +510,35 @@ footer {
 }
 
 .item1 i {
-    color: var(--color2);
-    margin-bottom: 20px
+    color: var(--color2)
 }
 
 .item1 strong {
+    display: block;
+    margin: 20px auto;
     font-weight: normal;
     font-size: 20px
 }
 
 .item1 p {
-    margin-top: 20px;
     color: var(--color3)
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
     .container6 {
         width: 100%
     }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1024px) {
     .container6 {
         flex-direction: column
     }
 }
 
-@media (max-width: 400px) {
-    .main-h3 {
-        font-size: 28px
-    }
-}
+/* End Services */
 
-@media (max-width: 300px) {
-    .main-h3 {
-        font-size: 24px
-    }
-}
-
-/* Schedule */
+/* Start Schedule */
 
 #schedule {
     padding: 50px 0;
@@ -679,17 +561,12 @@ footer {
     margin-bottom: 12px;
     font-size: 20px;
     color: black;
-    background: white;
+    background: var(--white);
     padding: 28px 30px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     line-height: 25px;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    transition: .3s;
     position: relative
 }
 
@@ -738,7 +615,7 @@ footer {
     padding: 30px;
     margin-left: 50px;
     display: flex;
-    background: white;
+    background: var(--white);
     margin-bottom: 35px
 }
 
@@ -768,7 +645,7 @@ footer {
     color: var(--color1)
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
     .container7 {
         width: 100%
     }
@@ -778,7 +655,7 @@ footer {
     }
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1024px) {
     .container7 {
         flex-direction: column
     }
@@ -798,7 +675,7 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .item2 {
         padding: 10px;
         text-align: center;
@@ -810,7 +687,9 @@ footer {
     }
 }
 
-/* About */
+/* End Schedule */
+
+/* Start About */
 
 .container9 {
     display: flex;
@@ -850,7 +729,7 @@ footer {
     line-height: 24px
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
     .container9 {
         width: 100%
     }
@@ -860,7 +739,7 @@ footer {
     }
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1024px) {
     .container9 {
         flex-direction: column;
         align-items: center;
@@ -880,25 +759,9 @@ footer {
     }
 }
 
-@media (max-width: 555px) {
-    .text5 span {
-        font-size: 24px
-    }
-}
+/* End About */
 
-@media (max-width: 480px) {
-    .text5 span {
-        font-size: 20px
-    }
-}
-
-@media (max-width: 333px) {
-    .text5 strong {
-        font-size: 18px
-    }
-}
-
-/* Testimonial */
+/* Start Testimonial */
 
 #mixedSlider {
     position: relative;
@@ -945,19 +808,14 @@ footer {
     border: none;
     border-radius: 50%;
     width: 10px;
-    height: 10px;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    transition: .3s
+    height: 10px
 }
 
 #mixedSlider .MS-controls button:hover {
     background: var(--color1)
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
     #mixedSlider .MS-content {
         width: 100%
     }
@@ -967,20 +825,22 @@ footer {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
     #mixedSlider .MS-content .ms-item {
         width: 50%;
         margin: 0
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     #mixedSlider .MS-content .ms-item {
         width: 100%
     }
 }
 
-/* Coaches */
+/* End Testimonial */
+
+/* Start Coaches */
 
 .container10 {
     width: 80%;
@@ -1011,11 +871,6 @@ footer {
 }
 
 .coach ul li {
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    transition: .3s;
     cursor: pointer;
     margin: 0 3px;
     display: inline-block;
@@ -1026,20 +881,22 @@ footer {
     color: var(--color1)
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
     .container10 {
         width: 98%
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1024px) {
     .container10 {
         width: 100%;
         flex-direction: column
     }
 }
 
-/* Blog */
+/* End Coaches */
+
+/* Start Blog */
 
 .container11 {
     display: flex;
@@ -1048,13 +905,16 @@ footer {
     justify-content: space-between
 }
 
+.blog1 {
+    display: flex
+}
+
 .blog12 {
     margin: 0 20px
 }
 
 .blog-img {
-    height: 300px;
-    width: 300px;
+    flex: 1;
     background-position: center;
     background-size: cover
 }
@@ -1073,7 +933,7 @@ footer {
 
 .blog-img p {
     display: flex;
-    color: white;
+    color: var(--white);
     font-size: 24px
 }
 
@@ -1084,19 +944,13 @@ footer {
 }
 
 .text6 {
-    background: white;
+    flex: 1;
+    background: var(--white);
     padding: 14px;
-    text-align: left ! important;
-    margin-top: -45px;
-    margin-left: 40px
+    text-align: left ! important
 }
 
 .text6 p {
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    transition: .3s;
     margin-bottom: 15px;
     cursor: pointer
 }
@@ -1106,11 +960,13 @@ footer {
 }
 
 .text6 span {
+    margin-bottom: 10px;
+    display: block;
     color: var(--color3)
 }
 
 .text6 a {
-    color: white;
+    color: var(--white);
     background: var(--color1);
     padding: 7px 26px;
     border-radius: 25px;
@@ -1119,61 +975,32 @@ footer {
     width: fit-content
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
     .container11 {
         width: 98%
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     .container11 {
         width: 100%;
         flex-direction: column
     }
 
     .blog12 {
-        margin-left: 0;
-        margin-right: 0
-    }
-
-    .blog-img {
-        display: block;
-        margin: auto
-    }
-
-    .text6 {
-        border: 1px dotted var(--color1);
-        margin-top: 0;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        text-align: center ! important
-    }
-
-    .text6 a {
-        margin: auto
+        margin: 20px 0
     }
 }
 
-@media (max-width: 325px) {
-    .blog-img {
-        width: 250px;
-        height: 250px
-    }
-
-    .text6 a {
-        padding: 5px 15px
+@media (max-width: 480px) {
+    .blog1 {
+        flex-direction: column
     }
 }
 
-@media (max-width: 275px) {
-    .blog-img {
-        width: 200px;
-        height: 200px
-    }
-}
+/* End Blog */
 
-/* Contact */
+/* Start Contact */
 
 .container12 {
     display: flex;
@@ -1193,6 +1020,9 @@ footer {
 
 .container12 ul li {
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
     margin-bottom: 12px;
     background: var(--bg);
@@ -1204,9 +1034,12 @@ footer {
 }
 
 .container12 ul li i {
-    margin-right: 10px;
-    color: var(--color2);
-    margin-bottom: 15px
+    color: var(--color2)
+}
+
+.container12 ul li strong {
+    display: block;
+    margin: 10px 0
 }
 
 .container12 ul li span {
@@ -1222,6 +1055,7 @@ footer {
 }
 
 .form {
+    align-self: center;
     display: flex;
     flex-direction: column;
     padding: 40px;
@@ -1249,7 +1083,8 @@ footer {
 }
 
 .form a {
-    color: white;
+    margin: auto;
+    color: var(--white);
     background: var(--color1);
     padding: 7px 26px;
     border-radius: 25px;
@@ -1257,53 +1092,33 @@ footer {
     width: fit-content
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
     .container12 {
-        width: 100%
+        width: 98%
     }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1024px) {
     .container12 {
         flex-direction: column
-    }
-
-    .container12 ul li {
-        text-align: center;
-        display: flex;
-        flex-direction: column
-    }
-
-    .container12 ul li:last-child {
-        margin-bottom: 15px
-    }
-
-    .container12 ul li i {
-        margin-right: 0
-    }
-
-    .form a {
-        margin: auto
     }
 
     .container12 ul,
     .form {
-        margin-left: 0;
-        margin-right: 0
+        margin: 5px;
+        width: 98%
     }
 }
 
-@media (max-width: 400px) {
-    .form a {
-        padding: 5px 15px
-    }
-
+@media (max-width: 768px) {
     .form {
         padding: 10px
     }
 }
 
-/* Gallery */
+/* End Contact */
+
+/* Start Gallery */
 
 .fg-gallery {
     display: flex
@@ -1415,11 +1230,6 @@ footer {
 
 .gallery-arrow > svg {
     fill: #fff;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    transition: .3s;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
@@ -1465,11 +1275,6 @@ footer {
     fill: #fff;
     width: 15px;
     height: 15px;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    transition: .3s;
     -webkit-transform: rotateZ(0deg);
     -ms-transform: rotateZ(0deg);
     -moz-transform: rotateZ(0deg);
@@ -1485,7 +1290,7 @@ footer {
     transform: rotateZ(180deg)
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
     .fg-gallery {
         flex-direction: column
     }
@@ -1497,7 +1302,9 @@ footer {
     }
 }
 
-/* Footer */
+/* End Gallery */
+
+/* Start Footer */
 
 footer {
     background: black
@@ -1516,7 +1323,7 @@ footer {
 }
 
 .container13 ul h5 {
-    color: white;
+    color: var(--white);
     font-size: 24px;
     margin-bottom: 25px
 }
@@ -1540,13 +1347,13 @@ footer {
     margin-right: 12px
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
     .container13 {
         width: 98%
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
     .container13 {
         flex-direction: column
     }
@@ -1565,3 +1372,5 @@ footer {
         font-size: 15px
     }
 }
+
+/* End Footer */
