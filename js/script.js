@@ -29,7 +29,7 @@ $(document).ready(function () { // Start Coding Here
     $(window).scroll(function () {
         var i = $(this).scrollTop()
 
-        if (i >= 300) {
+        if (i >= 50) {
             $("header").addClass("change");
         } else {
             $("header").removeClass("change");
